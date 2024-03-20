@@ -26,6 +26,10 @@ metadata:
   generateName: hlf-channels-
   # name: hlf-channels-0
 spec:
+  {{- if $.Values.argo.serviceAccountName }}
+  serviceAccountName: {{ $.Values.argo.serviceAccountName }}
+  {{- end }}{{""}}
+
   entrypoint: channels
 
   # additional entries going into /etc/hosts file

@@ -28,6 +28,11 @@ externalOrderer:
   host: # orderer0
   port: "7050"
 
+# values passed to argo workflow
+argo:
+  # set to a value, to run the workflow pods with specified service account
+  serviceAccountName:
+
 logLevel: info
 
 flow:

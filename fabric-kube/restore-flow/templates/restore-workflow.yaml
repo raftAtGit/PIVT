@@ -5,6 +5,10 @@ kind: Workflow
 metadata:
   generateName: hlf-restore-
 spec:
+  {{- if $.Values.argo.serviceAccountName }}
+  serviceAccountName: {{ $.Values.argo.serviceAccountName }}
+  {{- end }}{{""}}
+
   entrypoint: restore
 
   templates:

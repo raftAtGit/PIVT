@@ -29,6 +29,11 @@ backup:
       # AWS secret_access_key
       secretAccessKey: 
 
+# values passed to argo workflow
+argo:
+  # set to a value, to run the workflow pods with specified service account
+  serviceAccountName:
+
 flow:
   peer:
     backup: 

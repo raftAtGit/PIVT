@@ -16,6 +16,10 @@ kind: Workflow
 metadata:
   generateName: hlf-peer-orgs-
 spec:
+  {{- if $.Values.argo.serviceAccountName }}
+  serviceAccountName: {{ $.Values.argo.serviceAccountName }}
+  {{- end }}{{""}}
+
   entrypoint: peer-orgs
 
   # additional entries going into /etc/hosts file

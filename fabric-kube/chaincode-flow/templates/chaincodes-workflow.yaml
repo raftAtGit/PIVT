@@ -26,6 +26,10 @@ metadata:
   # name: hlf-chaincodes
   generateName: hlf-chaincodes-
 spec:
+  {{- if $.Values.argo.serviceAccountName }}
+  serviceAccountName: {{ $.Values.argo.serviceAccountName }}
+  {{- end }}{{""}}
+
   entrypoint: chaincodes
 
   # additional entries going into /etc/hosts file
